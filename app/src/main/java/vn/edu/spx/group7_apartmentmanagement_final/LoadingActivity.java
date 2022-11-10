@@ -16,7 +16,7 @@ public class LoadingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_loading);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         progressBar=findViewById(R.id.progress_bar);
-        textView=findViewById(R.id.tv_1);
+        textView=findViewById(R.id.text_view);
         progressAnimation();
         progressBar.setMax(100);
         progressBar.setScaleY(3f);

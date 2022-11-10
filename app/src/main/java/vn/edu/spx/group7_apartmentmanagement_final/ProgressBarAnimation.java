@@ -18,15 +18,16 @@ public class ProgressBarAnimation extends Animation {
         this.progressBar=progressBar;
         this.from=from;
         this.to=to;
+        this.textView=textView;
+
     }
 
     @Override
     protected void applyTransformation(float interpolatedTime, Transformation t) {
         super.applyTransformation(interpolatedTime, t);
-        super.applyTransformation(interpolatedTime,t);
         float value=from + (to - from) * interpolatedTime;
         progressBar.setProgress((int)value);
-        textView.setText((int)value +"%");
+        textView.setText((int)value+" %");
         if(value==to){
             context.startActivity(new Intent(context,LoginActivity.class));
         }
