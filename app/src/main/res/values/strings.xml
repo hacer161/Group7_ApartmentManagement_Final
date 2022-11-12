@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Group7_ApartmentManagement_Final</string>
+    <string name="home"><b>TRANG CHỦ</b></string>
+    <string name="rooms"><b>PHÒNG</b></string>
+    <string name="bills"><b>HÓA ĐƠN</b></string>
 </resources>

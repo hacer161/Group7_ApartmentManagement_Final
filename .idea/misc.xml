@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/drawable/selector.xml" value="0.2985" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/activity_bills.xml" value="0.36666666666666664" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/activity_loading.xml" value="0.36666666666666664" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/activity_rooms.xml" value="0.36666666666666664" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/menu/menu.xml" value="0.18802083333333333" />
       </map>
     </option>
   </component>
