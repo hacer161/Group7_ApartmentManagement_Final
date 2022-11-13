@@ -70,6 +70,14 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+        tvCreateAccount.setOnClickListener(view->{
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        });
+        tvUpdatePass.setOnClickListener(view->{
+            Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+            startActivity(intent);
+        });
 
 }
 
