@@ -144,7 +144,6 @@
                 android:layout_gravity="center_horizontal"
                 android:padding="8dp"
                 android:text="Đăng ký"
-
                 android:textSize="16dp" />
         </LinearLayout>
     </LinearLayout>

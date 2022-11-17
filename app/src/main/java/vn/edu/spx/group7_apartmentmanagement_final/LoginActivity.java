@@ -1,5 +1,4 @@
 package vn.edu.spx.group7_apartmentmanagement_final;
-
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -70,7 +69,10 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
+        tvCreateAccount.setOnClickListener(view->{
+            Intent intent=new Intent(LoginActivity.this,SigninActivity.class);
+            startActivity(intent);
+        });
 }
 
     @Override

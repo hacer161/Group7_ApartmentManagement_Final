@@ -14,7 +14,7 @@ public class DAO_Login {
     SQLiteDatabase database;
     myHelper myHelper;
     public static final String CREATE_TB_LOGIN = "CREATE TABLE LOGIN(IDAMIN TEXT NOT NULL PRIMARY KEY, FULLNAME TEXT NOT NULL, PHONE TEXT NOT NULL, PASSWORD TEXT NOT NULL);";
-    public static final String TB_NAME = "ADMIN";
+    public static final String TB_NAME = "LOGIN";
     public static final String IDAMIN = "IDAMIN";
     public static final String FULLNAME = "FULLNAME";
     public static final String PHONE = "PHONE";
