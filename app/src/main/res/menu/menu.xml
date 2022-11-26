@@ -4,6 +4,12 @@
         android:title="@string/home"
         android:icon="@drawable/trangchu"
         />
+    <item android:id="@+id/contracts"
+        android:title="@string/contracts"
+        android:icon="@drawable/contracts"/>
+    <item android:id="@+id/tenants"
+        android:title="@string/tenant"
+        android:icon="@drawable/tenant"/>
     <item android:id="@+id/rooms"
         android:title="@string/rooms"
         android:icon="@drawable/room"/>
