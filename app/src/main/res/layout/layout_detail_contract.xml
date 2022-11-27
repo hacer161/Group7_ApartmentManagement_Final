@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_id_contract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:text="Mã hợp đồng: "
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/tv_room_number_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:text="Số Phòng: "
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tv_tenant_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Người thuê:  "
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/tv_rent_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Thời gian thuê:  "
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/tv_roomprice_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Tiền phòng: "
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tv_waterbill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Tiền nước 1 khối: "
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/tv_electricbill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Tiền điện 1 kWH: "
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/tv_servicebill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Tiền dịch vụ 1 tháng: "
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14dp" />
+
+
+</LinearLayout>

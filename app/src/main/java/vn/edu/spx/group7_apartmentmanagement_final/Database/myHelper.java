@@ -4,7 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import vn.edu.spx.group7_apartmentmanagement_final.DAO.DAO_Contract;
 import vn.edu.spx.group7_apartmentmanagement_final.DAO.DAO_Login;
+import vn.edu.spx.group7_apartmentmanagement_final.DAO.DAO_Tenant;
 
 public class myHelper extends SQLiteOpenHelper {
     static final String db_NAME = "QUANLY.db";
@@ -17,11 +19,16 @@ public class myHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(DAO_Login.CREATE_TB_LOGIN);
+        db.execSQL(DAO_Contract.CREATE_TB_CONTRACT);
+        db.execSQL(DAO_Tenant.CREATE_TB_TENANT);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+DAO_Login.TB_NAME);
+        db.execSQL("DROP TABLE IF EXISTS "+DAO_Contract.TB_NAME);
+
+        db.execSQL("DROP TABLE IF EXISTS "+DAO_Tenant.TB_NAME);
 
     }
 }
