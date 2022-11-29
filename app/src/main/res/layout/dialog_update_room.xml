@@ -16,7 +16,7 @@
             android:background="#F12424"
             android:gravity="center"
             android:padding="10dp"
-            android:text="CẬP NHẬT HỢP ĐỒNG "
+            android:text="THÊM THÔNG TIN PHÒNG "
             android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="28dp" />
@@ -38,7 +38,7 @@
                 android:textSize="16dp" />
 
             <Spinner
-                android:id="@+id/spinner_tenant_nameUP"
+                android:id="@+id/spinner_tenant_nameUPROOM"
                 android:layout_width="250dp"
                 android:layout_height="50dp" />
         </LinearLayout>
@@ -50,7 +50,7 @@
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="10dp"
             android:hint="NHẬP SỐ PHÒNG"
-            android:id="@+id/input_room_numberUP"
+            android:id="@+id/input_room_numberUPROOM"
             app:boxCornerRadiusBottomEnd="20dp"
             app:boxCornerRadiusBottomStart="20dp"
             app:boxCornerRadiusTopEnd="20dp"
@@ -65,52 +65,7 @@
                 android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="12dp"
-                android:id="@+id/img_select_start_renttimeUP"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/calendar"
-                />
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_select_start_renttimeUP"
-                android:layout_height="wrap_content"
 
-                android:layout_width="match_parent"
-                android:hint="CHỌN NGÀY KÝ HỢP ĐỒNG"
-
-                android:background="@drawable/background_tv"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="12dp"
-                android:id="@+id/img_select_end_renttimeUP"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/calendar"
-                />
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_select_end_renttimeUP"
-                android:layout_height="wrap_content"
-
-                android:layout_width="match_parent"
-                android:hint="CHỌN NGÀY KẾT THÚC HỢP ĐỒNG"
-
-                android:background="@drawable/background_tv"/>
-        </LinearLayout>
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
@@ -118,7 +73,7 @@
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="10dp"
             android:hint="NHẬP SỐ TIỀN PHÒNG"
-            android:id="@+id/input_roompriceUP"
+            android:id="@+id/input_roompriceUPROOM"
             app:boxCornerRadiusBottomEnd="20dp"
             app:boxCornerRadiusBottomStart="20dp"
             app:boxCornerRadiusTopEnd="20dp"
@@ -139,8 +94,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="10dp"
-            android:hint="NHẬP SỐ TIỀN NƯỚC"
-            android:id="@+id/input_waterbill_UP"
+            android:hint="NHẬP SỐ KHỐI NƯỚC SỬ DỤNG"
+            android:id="@+id/input_waterbill_UPROOM"
             app:boxCornerRadiusBottomEnd="20dp"
             app:boxCornerRadiusBottomStart="20dp"
             app:boxCornerRadiusTopEnd="20dp"
@@ -160,8 +115,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="10dp"
-            android:hint="NHẬP SỐ TIỀN ĐIỆN"
-            android:id="@+id/input_electricbill_UP"
+            android:hint="NHẬP SỐ kWH ĐIỆN SỬ DỤNG"
+            android:id="@+id/input_electricbill_UPROOM"
             app:boxCornerRadiusBottomEnd="20dp"
             app:boxCornerRadiusBottomStart="20dp"
             app:boxCornerRadiusTopEnd="20dp"
@@ -183,7 +138,7 @@
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="10dp"
             android:hint="NHẬP SỐ TIỀN DỊCH VỤ"
-            android:id="@+id/input_roomserviceUP"
+            android:id="@+id/input_roomserviceUPROOM"
             app:boxCornerRadiusBottomEnd="20dp"
             app:boxCornerRadiusBottomStart="20dp"
             app:boxCornerRadiusTopEnd="20dp"
@@ -204,9 +159,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            android:id="@+id/btn_UpContract"
+            android:id="@+id/btn_UPRoom"
             android:backgroundTint="#FF3232"
-            android:text="CẬP NHẬT"
+            android:text="THÊM MỚI"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="20dp" />

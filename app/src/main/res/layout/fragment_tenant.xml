@@ -4,18 +4,18 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="NGƯỜI THUÊ"
-        android:textStyle="bold"
-        android:textSize="28dp"
-        android:textColor="@color/white"
-        android:padding="10dp"
-        android:gravity="center"
-        android:background="#FA2121"
         android:layout_alignParentTop="true"
-        android:id="@+id/title"/>
+        android:background="#651FFF"
+        android:padding="10dp"
+        android:text="NGƯỜI THUÊ"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcv_list_tenant"

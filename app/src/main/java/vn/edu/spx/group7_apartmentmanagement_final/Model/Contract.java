@@ -5,7 +5,8 @@ public class Contract {
     private int idTenant;
     private String TenantName;
     private String RoomNumber;
-    private String Time;
+    private String StartTime;
+    private String EndTime;
     private int RoomPrice;
     private int WaterBill;
     private int ElectricBill;
@@ -15,12 +16,13 @@ public class Contract {
 
     }
 
-    public Contract(int idContract, int idTenant, String tenantName, String roomNumber, String time, int roomPrice, int waterBill, int electricBill, int serviceBill) {
+    public Contract(int idContract, int idTenant, String tenantName, String roomNumber, String startTime, String endTime, int roomPrice, int waterBill, int electricBill, int serviceBill) {
         this.idContract = idContract;
         this.idTenant = idTenant;
         TenantName = tenantName;
         RoomNumber = roomNumber;
-        Time = time;
+        StartTime = startTime;
+        EndTime = endTime;
         RoomPrice = roomPrice;
         WaterBill = waterBill;
         ElectricBill = electricBill;
@@ -59,12 +61,20 @@ public class Contract {
         RoomNumber = roomNumber;
     }
 
-    public String getTime() {
-        return Time;
+    public String getStartTime() {
+        return StartTime;
     }
 
-    public void setTime(String time) {
-        Time = time;
+    public void setStartTime(String startTime) {
+        StartTime = startTime;
+    }
+
+    public String getEndTime() {
+        return EndTime;
+    }
+
+    public void setEndTime(String endTime) {
+        EndTime = endTime;
     }
 
     public int getRoomPrice() {

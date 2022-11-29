@@ -20,7 +20,7 @@
             android:textColor="@color/white"
             android:padding="10dp"
             android:textStyle="bold"
-            android:background="#F64B4B"
+            android:background="#651FFF"
             android:textSize="28dp"
             android:gravity="start"
             android:layout_alignParentTop="true"/>

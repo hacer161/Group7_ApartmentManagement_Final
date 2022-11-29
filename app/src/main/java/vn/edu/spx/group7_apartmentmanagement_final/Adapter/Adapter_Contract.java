@@ -1,12 +1,15 @@
 package vn.edu.spx.group7_apartmentmanagement_final.Adapter;
 
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,8 +19,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.textview.MaterialTextView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import vn.edu.spx.group7_apartmentmanagement_final.DAO.DAO_Contract;
 import vn.edu.spx.group7_apartmentmanagement_final.DAO.DAO_Tenant;
@@ -27,6 +32,7 @@ import vn.edu.spx.group7_apartmentmanagement_final.R;
 import vn.edu.spx.group7_apartmentmanagement_final.ViewHolder.ViewHolder_Contract;
 
 public class Adapter_Contract extends RecyclerView.Adapter<ViewHolder_Contract> {
+    int cyearup,cmonthup,cdayup;
     DAO_Tenant dao_tenant;
     AdapterSpinnerTenant adapterSpinnerTenant;
     ArrayList<Tenant> listTenant;
@@ -87,11 +93,14 @@ public class Adapter_Contract extends RecyclerView.Adapter<ViewHolder_Contract> 
 
     private Spinner spinner_tenant_nameUP;
     private TextInputLayout inputRoomNumberUp;
-    private TextInputLayout inputRentTimeUp;
+    private MaterialTextView tv_select_start_renttimeUP;
+    private MaterialTextView tv_select_end_renttimeUP;
     private TextInputLayout inputRoomPriceUp;
     private TextInputLayout inputWaterBillUp;
     private TextInputLayout inputElectricBillUp;
     private TextInputLayout inputServiceBillUp;
+    private ImageView img_select_start_renttimeUP;
+    private ImageView img_select_end_renttimeUP;
     private MaterialButton btnUpContract;
 
     public void dialogUpdate(Contract contract, int index) {
@@ -100,12 +109,49 @@ public class Adapter_Contract extends RecyclerView.Adapter<ViewHolder_Contract> 
         dialog.getWindow().setBackgroundDrawableResource(R.drawable.background_dialog);
         spinner_tenant_nameUP = dialog.findViewById(R.id.spinner_tenant_nameUP);
         inputRoomNumberUp = dialog.findViewById(R.id.input_room_numberUP);
-        inputRentTimeUp = dialog.findViewById(R.id.input_timeUP);
+        tv_select_start_renttimeUP = dialog.findViewById(R.id.tv_select_start_renttimeUP);
+        tv_select_end_renttimeUP = dialog.findViewById(R.id.tv_select_end_renttimeUP);
         inputRoomPriceUp = dialog.findViewById(R.id.input_roompriceUP);
         inputWaterBillUp = dialog.findViewById(R.id.input_waterbill_UP);
         inputElectricBillUp = dialog.findViewById(R.id.input_electricbill_UP);
         inputServiceBillUp = dialog.findViewById(R.id.input_roomserviceUP);
         btnUpContract = dialog.findViewById(R.id.btn_UpContract);
+        img_select_start_renttimeUP=dialog.findViewById(R.id.img_select_start_renttimeUP);
+        img_select_end_renttimeUP=dialog.findViewById(R.id.img_select_end_renttimeUP);
+        img_select_start_renttimeUP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar calendar = Calendar.getInstance();
+                cyearup = calendar.get(Calendar.YEAR);
+                cmonthup = calendar.get(Calendar.MONTH);
+                cdayup = calendar.get(Calendar.DAY_OF_MONTH);
+                DatePickerDialog datePickerDialog = new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        tv_select_start_renttimeUP.setText(dayOfMonth+"/"+(month+1)+"/"+year);
+                    }
+                },cyearup, cmonthup, cdayup);
+                datePickerDialog.getDatePicker().setMinDate(-1576800000000L);
+                datePickerDialog.show();
+            }
+        });
+        img_select_end_renttimeUP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar calendar = Calendar.getInstance();
+                cyearup = calendar.get(Calendar.YEAR);
+                cmonthup = calendar.get(Calendar.MONTH);
+                cdayup = calendar.get(Calendar.DAY_OF_MONTH);
+                DatePickerDialog datePickerDialog = new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        tv_select_end_renttimeUP.setText(dayOfMonth+"/"+(month+1)+"/"+year);
+                    }
+                },cyearup, cmonthup, cdayup);
+                datePickerDialog.getDatePicker().setMinDate(-1576800000000L);
+                datePickerDialog.show();
+            }
+        });
 
         adapterSpinnerTenant = new AdapterSpinnerTenant(listTenant);
         spinner_tenant_nameUP.setAdapter(adapterSpinnerTenant);
@@ -120,7 +166,8 @@ public class Adapter_Contract extends RecyclerView.Adapter<ViewHolder_Contract> 
             e.printStackTrace();
         }
         inputRoomNumberUp.getEditText().setText(contract.getRoomNumber());
-        inputRentTimeUp.getEditText().setText(contract.getTime());
+        tv_select_start_renttimeUP.setText(contract.getStartTime());
+        tv_select_end_renttimeUP.setText(contract.getEndTime());
         inputRoomPriceUp.getEditText().setText(contract.getRoomPrice() + "");
         inputWaterBillUp.getEditText().setText(contract.getWaterBill()+"");
         inputElectricBillUp.getEditText().setText(contract.getElectricBill()+"");
@@ -133,7 +180,8 @@ public class Adapter_Contract extends RecyclerView.Adapter<ViewHolder_Contract> 
                     contract.setTenantName(tenant.getTenantName());
                     contract.setIdTenant(tenant.getIdTenant());
                     contract.setRoomNumber(inputRoomNumberUp.getEditText().getText().toString().trim());
-                    contract.setTime(inputRentTimeUp.getEditText().getText().toString().trim());
+                    contract.setStartTime(tv_select_start_renttimeUP.getText().toString().trim());
+                    contract.setEndTime(tv_select_end_renttimeUP.getText().toString().trim());
                     contract.setRoomPrice(Integer.parseInt(inputRoomPriceUp.getEditText().getText().toString().trim()));
                     contract.setWaterBill(Integer.parseInt(inputWaterBillUp.getEditText().getText().toString().trim()));
                     contract.setElectricBill(Integer.parseInt(inputElectricBillUp.getEditText().getText().toString().trim()));
@@ -182,7 +230,8 @@ public class Adapter_Contract extends RecyclerView.Adapter<ViewHolder_Contract> 
 
     public boolean checkErrorUp() {
         if (inputRoomNumberUp.getEditText().getText().toString().trim().isEmpty() ||
-                inputRentTimeUp.getEditText().getText().toString().trim().isEmpty() ||
+                tv_select_start_renttimeUP.getText().toString().trim().isEmpty() ||
+                tv_select_end_renttimeUP.getText().toString().trim().isEmpty() ||
                 inputRoomPriceUp.getEditText().getText().toString().trim().isEmpty() ||
                 inputWaterBillUp.getEditText().getText().toString().trim().isEmpty() ||
                 inputElectricBillUp.getEditText().getText().toString().trim().isEmpty() ||
@@ -192,10 +241,15 @@ public class Adapter_Contract extends RecyclerView.Adapter<ViewHolder_Contract> 
             } else {
                 inputRoomNumberUp.setError("");
             }
-            if (inputRentTimeUp.getEditText().getText().toString().trim().isEmpty()) {
-                inputRentTimeUp.setError("Thời gian thuê không được để trống");
+            if (tv_select_start_renttimeUP.getText().toString().trim().isEmpty()) {
+                tv_select_start_renttimeUP.setError("Thời gian bắt đầu thuê không được để trống");
             } else {
-                inputRentTimeUp.setError("");
+                tv_select_start_renttimeUP.setError("");
+            }
+            if (tv_select_end_renttimeUP.getText().toString().trim().isEmpty()) {
+                tv_select_end_renttimeUP.setError("Thời gian kết thúc thuê không được để trống");
+            } else {
+                tv_select_end_renttimeUP.setError("");
             }
             if (inputRoomPriceUp.getEditText().getText().toString().trim().isEmpty()) {
                 inputRoomPriceUp.setError("Tiền phòng không được để trống");
@@ -229,7 +283,8 @@ public class Adapter_Contract extends RecyclerView.Adapter<ViewHolder_Contract> 
     private TextView tv_id_contract;
     private TextView tv_room_number_details;
     private TextView tv_tenant_name_details;
-    private TextView tv_rent_time_details;
+    private TextView tv_start_renttime_details;
+    private TextView tv_end_renttime_details;
     private TextView tv_room_price_details;
     private TextView tv_waterbill_details;
     private TextView tv_electricbill_details;
@@ -243,7 +298,8 @@ public class Adapter_Contract extends RecyclerView.Adapter<ViewHolder_Contract> 
         tv_id_contract = dialog.findViewById(R.id.tv_id_contract);
         tv_room_number_details = dialog.findViewById(R.id.tv_room_number_details);
         tv_tenant_name_details = dialog.findViewById(R.id.tv_tenant_details);
-        tv_rent_time_details=dialog.findViewById(R.id.tv_rent_time);
+        tv_start_renttime_details=dialog.findViewById(R.id.tv_startrent_time);
+        tv_end_renttime_details=dialog.findViewById(R.id.tv_endrent_time);
         tv_room_price_details = dialog.findViewById(R.id.tv_roomprice_details);
         tv_waterbill_details = dialog.findViewById(R.id.tv_waterbill);
         tv_electricbill_details = dialog.findViewById(R.id.tv_electricbill);
@@ -251,7 +307,8 @@ public class Adapter_Contract extends RecyclerView.Adapter<ViewHolder_Contract> 
         tv_id_contract.setText("Số hợp đồng: " + obj.getIdContract());
         tv_room_number_details.setText("Số phòng: " + obj.getRoomNumber());
         tv_tenant_name_details.setText("Người Thuê: " + obj.getIdTenant() + "|" + obj.getTenantName());
-        tv_rent_time_details.setText("Thời gian thuê: " + obj.getTime());
+        tv_start_renttime_details.setText("Ngày bắt đầu thuê: " + obj.getStartTime());
+        tv_end_renttime_details.setText("Ngày kết thúc thuê: " + obj.getEndTime());
         tv_room_price_details.setText("Tiền phòng 1 tháng: " + obj.getRoomPrice());
         tv_waterbill_details.setText("Tiền nước 1 khối: " + obj.getWaterBill());
         tv_electricbill_details.setText("Tiền điện 1 kWH: " + obj.getElectricBill());
