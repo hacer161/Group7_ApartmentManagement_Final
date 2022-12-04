@@ -43,9 +43,6 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.rooms:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container,roomFragment).commit();
                         return true;
-                    case R.id.bills:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,billFragment).commit();
-                        return true;
                 }
                 return false;
             }

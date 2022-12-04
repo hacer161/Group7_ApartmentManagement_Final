@@ -16,8 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:itemBackground="@color/green"
-        app:itemTextColor="#F50057"
+        app:itemBackground="@color/deeppurple"
+        app:itemTextColor="#651FFF"
         app:menu="@menu/menu" />
 
 </RelativeLayout>

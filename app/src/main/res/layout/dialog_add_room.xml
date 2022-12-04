@@ -13,14 +13,35 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#F84C4C"
+            android:background="#F12424"
             android:gravity="center"
             android:padding="10dp"
-            android:text="THÊM THÔNG TIN PHÒNG"
+            android:text="THÊM THÔNG TIN PHÒNG "
             android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="28dp" />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="NGƯỜI THUÊ"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/spinner_tenant_nameADDROOM"
+                android:layout_width="250dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -28,8 +49,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="10dp"
-            android:hint="Nhập THỜI GIAN THUÊ PHÒNG"
-            android:id="@+id/input_date"
+            android:hint="NHẬP SỐ PHÒNG"
+            android:id="@+id/input_room_numberADDROOM"
             app:boxCornerRadiusBottomEnd="20dp"
             app:boxCornerRadiusBottomStart="20dp"
             app:boxCornerRadiusTopEnd="20dp"
@@ -44,14 +65,15 @@
                 android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
+
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="10dp"
-            android:hint="NHẬP SỐ PHÒNG"
-            android:id="@+id/input_room_number"
+            android:hint="NHẬP SỐ TIỀN PHÒNG"
+            android:id="@+id/input_roompriceADDROOM"
             app:boxCornerRadiusBottomEnd="20dp"
             app:boxCornerRadiusBottomStart="20dp"
             app:boxCornerRadiusTopEnd="20dp"
@@ -72,8 +94,29 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="10dp"
-            android:hint="NHẬP NGƯỜI THUÊ PHÒNG"
-            android:id="@+id/input_tenant"
+            android:hint="NHẬP SỐ KHỐI NƯỚC SỬ DỤNG"
+            android:id="@+id/input_waterbill_ADDROOM"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:boxCornerRadiusTopStart="20dp"
+            app:errorEnabled="true"
+            app:hintTextColor="#651FFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:hint="NHẬP SỐ kWH ĐIỆN SỬ DỤNG"
+            android:id="@+id/input_electricbill_ADDROOM"
             app:boxCornerRadiusBottomEnd="20dp"
             app:boxCornerRadiusBottomStart="20dp"
             app:boxCornerRadiusTopEnd="20dp"
@@ -94,8 +137,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="10dp"
-            android:hint="Nhập SỐ TIỀN PHẢI TRẢ"
-            android:id="@+id/input_price"
+            android:hint="NHẬP SỐ TIỀN DỊCH VỤ"
+            android:id="@+id/input_roomserviceADDROOM"
             app:boxCornerRadiusBottomEnd="20dp"
             app:boxCornerRadiusBottomStart="20dp"
             app:boxCornerRadiusTopEnd="20dp"
@@ -115,10 +158,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="40dp"
-            android:id="@+id/btn_addRoom"
-            android:backgroundTint="#FF2323"
-            android:text="Thêm sách"
+            android:layout_margin="20dp"
+            android:id="@+id/btn_ADDRoom"
+            android:backgroundTint="#FF3232"
+            android:text="THÊM MỚI"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="20dp" />

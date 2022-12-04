@@ -5,10 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:padding="8dp"
-    android:layout_marginBottom="10dp"
-    app:cardCornerRadius="15dp"
     app:cardElevation="10dp"
-
     android:orientation="horizontal">
 
     <LinearLayout
@@ -17,22 +14,21 @@
         android:orientation="horizontal">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="190dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_height="130dp"
                 android:src="@drawable/phong"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"/>
+                android:scaleType="centerCrop"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/tv_room_numberIR"
+                    android:id="@+id/tv_room_numberIBILL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SỐ PHÒNG"
@@ -44,21 +40,10 @@
                     android:layout_marginTop="10dp"
                     android:padding="5dp"/>
                 <TextView
-                    android:id="@+id/tv_room_statusIR"
+                    android:id="@+id/tv_room_priceIBILL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TRANGTHAI"
-                    android:textSize="14dp"
-                    android:layout_gravity="start"
-                    android:textColor="#DD2C00"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:padding="5dp"/>
-                <TextView
-                    android:id="@+id/tv_room_pricetotalIR"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Số tiền"
+                    android:text="TIỀN PHÒNG:"
                     android:textSize="14dp"
                     android:layout_gravity="start"
                     android:textColor="#DD2C00"
@@ -68,7 +53,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tv_details_room"
+                    android:id="@+id/tv_details_Bill"
                     android:text="Xem thêm"
                     android:textColor="#F31F1F"
                     android:textSize="16dp"
@@ -84,13 +69,13 @@
                 android:padding="8dp"
                 android:orientation="vertical">
                 <ImageView
-                    android:id="@+id/img_updateRoom"
+                    android:id="@+id/img_updateBILL"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="5dp"
                     android:src="@drawable/update"/>
                 <ImageView
-                    android:id="@+id/img_deleteRoom"
+                    android:id="@+id/img_deleteBILL"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"

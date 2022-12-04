@@ -51,24 +51,29 @@
             android:layout_height="wrap_content"
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/input_tenant_dob_Update"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
-        android:hint="NHẬP NGÀY SINH"
-        app:boxCornerRadiusBottomEnd="20dp"
-        app:boxCornerRadiusBottomStart="20dp"
-        app:boxCornerRadiusTopStart="20dp"
-        app:boxCornerRadiusTopEnd="20dp"
-        app:errorEnabled="true">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="text"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginRight="12dp"
+            android:id="@+id/img_select_dobUPDATE"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/calendar"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_select_dobUPDATE"
+            android:layout_height="wrap_content"
+
+            android:layout_width="match_parent"
+            android:hint="CHỌN NGÀY SINH"
+
+            android:background="@drawable/background_tv"/>
+    </LinearLayout>
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

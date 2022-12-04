@@ -65,27 +65,52 @@
                 android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginTop="10dp"
-            android:hint="NHẬP THỜI GIAN THUÊ"
-            android:id="@+id/input_timeADD"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            app:boxCornerRadiusTopEnd="20dp"
-            app:boxCornerRadiusTopStart="20dp"
-            app:errorEnabled="true"
-            app:hintTextColor="#651FFF">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginRight="12dp"
+                android:id="@+id/img_select_start_renttime"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/calendar"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_select_start_renttime"
+                android:layout_height="wrap_content"
+
+                android:layout_width="match_parent"
+                android:hint="CHỌN NGÀY KÝ HỢP ĐỒNG"
+
+                android:background="@drawable/background_tv"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:id="@+id/img_select_end_renttime"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/calendar"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_select_end_renttime"
+                android:layout_height="wrap_content"
+
+                android:layout_width="match_parent"
+                android:hint="CHỌN NGÀY KẾT THÚC HỢP ĐỒNG"
+
+                android:background="@drawable/background_tv"/>
+        </LinearLayout>
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"

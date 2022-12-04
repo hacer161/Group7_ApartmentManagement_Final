@@ -12,12 +12,13 @@ import vn.edu.spx.group7_apartmentmanagement_final.Model.Contract;
 import vn.edu.spx.group7_apartmentmanagement_final.Model.Tenant;
 
 public class DAO_Contract {
-        public static final String CREATE_TB_CONTRACT = "CREATE TABLE CONTRACT(IDCONTRACT INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,IDTENANT INTEGER NOT NULL, ROOMNUMBER TEXT NOT NULL,TIME DATE NOT NULL, ROOMPRICE INTEGER NOT NULL, WATERBILL INTEGER NOT NULL,ELECTRICBILL INTEGER NOT NULL,SERVICEBILL INTEGER NOT NULL, FOREIGN KEY(IDTENANT) REFERENCES TENANT(IDTENANT));";
+        public static final String CREATE_TB_CONTRACT = "CREATE TABLE CONTRACT(IDCONTRACT INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,IDTENANT INTEGER NOT NULL, ROOMNUMBER TEXT NOT NULL,STARTTIME DATE NOT NULL,ENDTIME DATE NOT NULL, ROOMPRICE INTEGER NOT NULL, WATERBILL INTEGER NOT NULL,ELECTRICBILL INTEGER NOT NULL,SERVICEBILL INTEGER NOT NULL, FOREIGN KEY(IDTENANT) REFERENCES TENANT(IDTENANT));";
         public static final String TB_NAME = "CONTRACT";
         public static final String IDCONTRACT = "IDCONTRACT";
         public static final String IDTENANT = "IDTENANT";
         public static final String ROOMNUMBER = "ROOMNUMBER";
-        public static final String TIME ="TIME";
+        public static final String STARTTIME ="STARTTIME";
+        public static final String ENDTIME ="ENDTIME";
         public static final String ROOMPRICE = "ROOMPRICE";
         public static final String WATERBILL = "WATERBILL";
         public static final String ELECTRICBILL = "ELECTRICBILL";
@@ -46,12 +47,13 @@ public class DAO_Contract {
                 contract.setIdContract(cursor.getInt(0));
                 contract.setIdTenant(cursor.getInt(1));
                 contract.setRoomNumber(cursor.getString(2));
-                contract.setTime(cursor.getString(3));
-                contract.setRoomPrice(cursor.getInt(4));
-                contract.setWaterBill(cursor.getInt(5));
-                contract.setElectricBill(cursor.getInt(6));
-                contract.setServiceBill(cursor.getInt(7));
-                contract.setTenantName(cursor.getString(9));
+                contract.setStartTime(cursor.getString(3));
+                contract.setEndTime(cursor.getString(4));
+                contract.setRoomPrice(cursor.getInt(5));
+                contract.setWaterBill(cursor.getInt(6));
+                contract.setElectricBill(cursor.getInt(7));
+                contract.setServiceBill(cursor.getInt(8));
+                contract.setTenantName(cursor.getString(10));
                 list.add(contract);
                 cursor.moveToNext();
             }
@@ -68,12 +70,13 @@ public class DAO_Contract {
                 contract.setIdContract(cursor.getInt(0));
                 contract.setIdTenant(cursor.getInt(1));
                 contract.setRoomNumber(cursor.getString(2));
-                contract.setTime(cursor.getString(3));
-                contract.setRoomPrice(cursor.getInt(4));
-                contract.setWaterBill(cursor.getInt(5));
-                contract.setElectricBill(cursor.getInt(6));
-                contract.setServiceBill(cursor.getInt(7));
-                contract.setTenantName(cursor.getString(9));
+                contract.setStartTime(cursor.getString(3));
+                contract.setEndTime(cursor.getString(4));
+                contract.setRoomPrice(cursor.getInt(5));
+                contract.setWaterBill(cursor.getInt(6));
+                contract.setElectricBill(cursor.getInt(7));
+                contract.setServiceBill(cursor.getInt(8));
+                contract.setTenantName(cursor.getString(10));
                 listB.add(contract);
                 cursor.moveToNext();
             }
@@ -90,12 +93,13 @@ public class DAO_Contract {
                 contract.setIdContract(cursor.getInt(0));
                 contract.setIdTenant(cursor.getInt(1));
                 contract.setRoomNumber(cursor.getString(2));
-                contract.setTime(cursor.getString(3));
-                contract.setRoomPrice(cursor.getInt(4));
-                contract.setWaterBill(cursor.getInt(5));
-                contract.setElectricBill(cursor.getInt(6));
-                contract.setServiceBill(cursor.getInt(7));
-                contract.setTenantName(cursor.getString(9));
+                contract.setStartTime(cursor.getString(3));
+                contract.setEndTime(cursor.getString(4));
+                contract.setRoomPrice(cursor.getInt(5));
+                contract.setWaterBill(cursor.getInt(6));
+                contract.setElectricBill(cursor.getInt(7));
+                contract.setServiceBill(cursor.getInt(8));
+                contract.setTenantName(cursor.getString(10));
                 listB.add(contract);
                 cursor.moveToNext();
             }
@@ -112,12 +116,13 @@ public class DAO_Contract {
                 contract.setIdContract(cursor.getInt(0));
                 contract.setIdTenant(cursor.getInt(1));
                 contract.setRoomNumber(cursor.getString(2));
-                contract.setTime(cursor.getString(3));
-                contract.setRoomPrice(cursor.getInt(4));
-                contract.setWaterBill(cursor.getInt(5));
-                contract.setElectricBill(cursor.getInt(6));
-                contract.setServiceBill(cursor.getInt(7));
-                contract.setTenantName(cursor.getString(9));
+                contract.setStartTime(cursor.getString(3));
+                contract.setEndTime(cursor.getString(4));
+                contract.setRoomPrice(cursor.getInt(5));
+                contract.setWaterBill(cursor.getInt(6));
+                contract.setElectricBill(cursor.getInt(7));
+                contract.setServiceBill(cursor.getInt(8));
+                contract.setTenantName(cursor.getString(10));
                 listB.add(contract);
                 cursor.moveToNext();
             }
@@ -126,7 +131,7 @@ public class DAO_Contract {
         }
         public ArrayList<Contract> selectTenantName4(ArrayList<Tenant> listC){
             ArrayList<Contract> listB = new ArrayList<>();
-            String select ="SELECT * FROM "+TB_NAME+" JOIN "+DAO_Tenant.TB_NAME+" ON "+TB_NAME+"."+IDTENANT+"="+DAO_Tenant.TB_NAME+"."+DAO_Tenant.IDTENANT+" WHERE CONTRACT."+IDTENANT+" NOT IN ( SELECT IDTENANT FROM CONTRACT WHERE IDTENANT = "+listC.get(0).getIdTenant()+" OR "+" IDTENANT = "+listC.get(1).getIdTenant()+" OR IDCATEGORY = "+listC.get(2).getIdTenant()+" )";
+            String select ="SELECT * FROM "+TB_NAME+" JOIN "+DAO_Tenant.TB_NAME+" ON "+TB_NAME+"."+IDTENANT+"="+DAO_Tenant.TB_NAME+"."+DAO_Tenant.IDTENANT+" WHERE CONTRACT."+IDTENANT+" NOT IN ( SELECT IDTENANT FROM CONTRACT WHERE IDTENANT = "+listC.get(0).getIdTenant()+" OR "+" IDTENANT = "+listC.get(1).getIdTenant()+" OR IDTENANT = "+listC.get(2).getIdTenant()+" )";
             Cursor cursor =database.rawQuery(select, null);
             cursor.moveToFirst();
             while (!cursor.isAfterLast()){
@@ -134,12 +139,13 @@ public class DAO_Contract {
                 contract.setIdContract(cursor.getInt(0));
                 contract.setIdTenant(cursor.getInt(1));
                 contract.setRoomNumber(cursor.getString(2));
-                contract.setTime(cursor.getString(3));
-                contract.setRoomPrice(cursor.getInt(4));
-                contract.setWaterBill(cursor.getInt(5));
-                contract.setElectricBill(cursor.getInt(6));
-                contract.setServiceBill(cursor.getInt(7));
-                contract.setTenantName(cursor.getString(9));
+                contract.setStartTime(cursor.getString(3));
+                contract.setEndTime(cursor.getString(4));
+                contract.setRoomPrice(cursor.getInt(5));
+                contract.setWaterBill(cursor.getInt(6));
+                contract.setElectricBill(cursor.getInt(7));
+                contract.setServiceBill(cursor.getInt(8));
+                contract.setTenantName(cursor.getString(10));
                 listB.add(contract);
                 cursor.moveToNext();
             }
@@ -150,7 +156,8 @@ public class DAO_Contract {
             ContentValues contentValues = new ContentValues();
             contentValues.put(IDTENANT, contract.getIdTenant());
             contentValues.put(ROOMNUMBER, contract.getRoomNumber());
-            contentValues.put(TIME,contract.getTime());
+            contentValues.put(STARTTIME,contract.getStartTime());
+            contentValues.put(ENDTIME,contract.getEndTime());
             contentValues.put(ROOMPRICE, contract.getRoomPrice());
             contentValues.put(WATERBILL, contract.getWaterBill());
             contentValues.put(ELECTRICBILL, contract.getElectricBill());
@@ -168,7 +175,8 @@ public class DAO_Contract {
             ContentValues contentValues = new ContentValues();
             contentValues.put(IDTENANT, contract.getIdTenant());
             contentValues.put(ROOMNUMBER, contract.getRoomNumber());
-            contentValues.put(TIME,contract.getTime());
+            contentValues.put(STARTTIME,contract.getStartTime());
+            contentValues.put(ENDTIME,contract.getEndTime());
             contentValues.put(ROOMPRICE, contract.getRoomPrice());
             contentValues.put(WATERBILL, contract.getWaterBill());
             contentValues.put(ELECTRICBILL, contract.getElectricBill());

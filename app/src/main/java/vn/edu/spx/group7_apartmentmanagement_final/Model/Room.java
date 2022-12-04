@@ -1,22 +1,28 @@
 package vn.edu.spx.group7_apartmentmanagement_final.Model;
 
 public class Room {
-        private int idRoom;
-        private String thoigian;
-        private String sophong;
-        private String nguoithue;
-        private double tienthue;
+    private int idRoom;
+    private int idTenant;
+    private String TenantName;
+    private String RoomNumber1;
+    private int RoomPrice1M;
+    private double WaterBill1M;
+    private double ElectricBill1M;
+    private double ServiceBill1M;
+    public Room(){
 
-        public Room() {
+    }
 
-        }
 
-    public Room(int idRoom, String thoigian, String sophong, String nguoithue, double tienthue) {
+    public Room(int idRoom, int idTenant, String tenantName, String roomNumber1, int roomPrice1M, double waterBill1M, double electricBill1M, double serviceBill1M) {
         this.idRoom = idRoom;
-        this.thoigian = thoigian;
-        this.sophong = sophong;
-        this.nguoithue = nguoithue;
-        this.tienthue = tienthue;
+        this.idTenant = idTenant;
+        TenantName = tenantName;
+        RoomNumber1 = roomNumber1;
+        RoomPrice1M = roomPrice1M;
+        WaterBill1M = waterBill1M;
+        ElectricBill1M = electricBill1M;
+        ServiceBill1M = serviceBill1M;
     }
 
     public int getIdRoom() {
@@ -27,39 +33,59 @@ public class Room {
         this.idRoom = idRoom;
     }
 
-    public String getThoigian() {
-        return thoigian;
+    public int getIdTenant() {
+        return idTenant;
     }
 
-    public void setThoigian(String thoigian) {
-        this.thoigian = thoigian;
+    public void setIdTenant(int idTenant) {
+        this.idTenant = idTenant;
     }
 
-    public String getSophong() {
-        return sophong;
+    public String getTenantName() {
+        return TenantName;
     }
 
-    public void setSophong(String sophong) {
-        this.sophong = sophong;
+    public void setTenantName(String tenantName) {
+        TenantName = tenantName;
     }
 
-    public String getNguoithue() {
-        return nguoithue;
+    public String getRoomNumber1() {
+        return RoomNumber1;
     }
 
-    public void setNguoithue(String nguoithue) {
-        this.nguoithue = nguoithue;
+    public void setRoomNumber1(String roomNumber1) {
+        RoomNumber1 = roomNumber1;
     }
 
-    public double getTienthue() {
-        return tienthue;
+    public int getRoomPrice1M() {
+        return RoomPrice1M;
     }
 
-    public void setTienthue(double tienthue) {
-        this.tienthue = tienthue;
+    public void setRoomPrice1M(int roomPrice1M) {
+        RoomPrice1M = roomPrice1M;
     }
 
-   /* public String toString(){
-            return "Tên sách: "+titleBook+" Mã sách: "+idBook+"\n"+"Giá Tiền: "+gia+" Tác giả: "+tacGia;
-        }*/
+    public double getWaterBill1M() {
+        return WaterBill1M;
+    }
+
+    public void setWaterBill1M(double waterBill1M) {
+        WaterBill1M = waterBill1M;
+    }
+
+    public double getElectricBill1M() {
+        return ElectricBill1M;
+    }
+
+    public void setElectricBill1M(double electricBill1M) {
+        ElectricBill1M = electricBill1M;
+    }
+
+    public double getServiceBill1M() {
+        return ServiceBill1M;
+    }
+
+    public void setServiceBill1M(double serviceBill1M) {
+        ServiceBill1M = serviceBill1M;
+    }
 }

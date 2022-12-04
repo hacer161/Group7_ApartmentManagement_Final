@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/drawable-v24/background_edittext.xml" value="0.2985" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/drawable/activity_register.xml" value="0.2985" />
-        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/drawable/ic_baseline_keyboard_backspace_24.xml" value="0.26" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/drawable/background_tv.xml" value="0.2985" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/drawable/selector.xml" value="0.2985" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/activity_bills.xml" value="0.36666666666666664" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/activity_forgot_password.xml" value="0.36666666666666664" />
@@ -13,11 +14,31 @@
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/activity_rooms.xml" value="0.36666666666666664" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/dialog_add_bill.xml" value="0.18802083333333333" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/dialog_add_contract.xml" value="0.18802083333333333" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/dialog_add_room.xml" value="0.36666666666666664" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/dialog_add_tenant.xml" value="0.5982627578718784" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/dialog_update_bill.xml" value="0.17239583333333333" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/dialog_update_contract.xml" value="0.36666666666666664" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/dialog_update_room.xml" value="0.15341880341880343" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/fragment_bill.xml" value="0.36666666666666664" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/fragment_contract.xml" value="0.36666666666666664" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/fragment_room.xml" value="0.36666666666666664" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/fragment_tenant.xml" value="0.36666666666666664" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/item_bill.xml" value="0.18802083333333333" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/item_contract.xml" value="0.36666666666666664" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/item_room.xml" value="0.24954710144927536" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/item_spinner_electricbill.xml" value="0.17239583333333333" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/item_spinner_room.xml" value="0.18802083333333333" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/item_spinner_roomprice.xml" value="0.17239583333333333" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/item_spinner_servicebill.xml" value="0.17239583333333333" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/item_spinner_tenant.xml" value="0.36666666666666664" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/item_spinner_waterbill.xml" value="0.17239583333333333" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/item_tenant.xml" value="0.1734375" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/layout_detail_contract.xml" value="0.18802083333333333" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/layout_details_room.xml" value="0.18697916666666667" />
+        <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/layout/update_tenant.xml" value="0.18802083333333333" />
         <entry key="..\:/Group7_ApartmentManagement_Final/app/src/main/res/menu/menu.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Admin/Group7_ApartmentManagement_FinalT/app/src/main/res/drawable-v24/background_edittext.xml" value="0.2455" />
         <entry key="..\:/Users/Admin/Group7_ApartmentManagement_FinalT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2455" />
